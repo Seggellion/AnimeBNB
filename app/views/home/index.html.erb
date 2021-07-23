@@ -1,0 +1,71 @@
+<%= render 'header' %>
+
+<div class="wrapper">
+  <div class="banner">
+
+    <div class="popup">
+
+
+      <% if current_user %>
+      <h2 class="center">Thanks for signing up!<br /> Stay tuned for updates!</h2>
+
+      <img src="https://pa1.narvii.com/7676/717445cd850127611f2ee15491fd9711df870c2er1-520-293_hq.gif" />
+      <br  />
+
+      <% else %>
+      <h1 class="h1">HOLD <span class="highlight">$ANIMEBNB</span>, <span class="pull-right">EARN BNB.</span></h1>
+      <p>
+        AnimeBNB  <span class="highlight">$ANB</span> is the  world's first Auto reward BNB cryptocurrency token.
+      </p>
+      <p>
+         At Anime BNB we are dedicated to giving the community a unique rewards system with exclusive payouts through a gaming platform so you can play and earn $BNB and <span class="highlight">$ANB</span>.
+    </p>
+      <p>
+         Presale Monday July 26th 2021. Join telegram for BNB giveaways
+      </p>
+      <%= link_to user_google_oauth2_omniauth_authorize_path, class: "login_link", method: :post do %>
+      Sign up for community updates
+      <%#= image_tag("google_login.png", class: "google_login")%>
+      <% end %>
+
+      <a href="#" class="login_link">
+      Join the presale
+      </a>
+
+      <% end %>
+
+    </div>
+
+  </div>
+
+
+  <% if user_signed_in? %>
+  <div class="profile_widget">
+    <a id="myLink" title="Click to do something"  onclick="myFunction()">
+      <%= image_tag("profile_photo.png", class: "avatar")%>
+    </a>
+
+    <div id="profile_menu" class="profile_menu hidden">
+      <ul>
+        <li class="list_header">
+          <%= @user.first_name %>
+          <span class="wallet">45¥</span>
+        </li>
+        <li>
+          Edit Profile
+        </li>
+        <li>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <% end %>
+  </div>
+  <script>
+    function myFunction() {
+      var menu_element =  document.getElementById("profile_menu");
+      menu_element.classList.toggle('hidden');
+    }
+  </script>

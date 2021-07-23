@@ -1,0 +1,70 @@
+@import 'mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Cormorant Garamond', serif;
+  margin-top:0px;
+}
+.h1{
+  font-size: 3rem;
+  line-height: 3.1rem;
+}
+.h2{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+.red{
+  color:red;
+}
+body{
+  margin:0px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.alerts{
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  border-radius: 10px;
+  text-align: center;
+  min-height: 39px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  &.hidden{
+    min-height:0px;
+    height:0px;
+    transition: all 0.5s ease;
+  }
+}
+
+
+
+@media screen and (min-width: $medium){
+  .alerts{
+    position:absolute;
+  }
+}
+
+
+.notice, .alert{
+  background-color: white;
+  width: 35%;
+  padding: 10px;
+  margin: 0px auto;
+}
+
+.wrapper{
+  .banner{
+    background-position: top;
+    background-image: image-url('anime_main.jpeg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

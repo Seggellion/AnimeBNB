@@ -1,0 +1,113 @@
+@import 'mixins';
+@media screen and (max-width: $small){
+  .wrapper .banner{
+    background-position-x: -480px;
+  }
+  .popup{
+    .h1{
+      margin-bottom:0px;
+      .highlight{
+        font-size:2.5rem;
+      }
+      .pull-right{
+        font-size: 3.4rem;
+      }
+    }
+  }
+}
+.popup{
+  width:80%;
+  background-color: white;
+  border-radius: 10px;
+  margin:0px auto;
+  padding: 30px 20px;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  p{
+    margin: 5px 0px;
+  }
+  .login_link{
+    text-align:center;
+    .google_login{
+      width: 60%;
+      margin: 0px auto;
+      margin:20px;
+    }
+  }
+  h1 {
+    width:100%;
+    .highlight{
+      font-size: 3.5rem;
+    }
+    .pull-right{
+      width:100%;
+      text-align:right;
+      display:block;
+      font-size: 4.4rem;
+      letter-spacing: 0.8px;
+    }
+  }
+  form{
+    width: 100%;
+    text-align: center;
+    .field input{
+      font-size: 2rem;
+      padding:10px;
+    }
+    ::placeholder{
+      color:#bfbfbf;
+    }
+    .actions input[type="submit"]{
+      text-transform: uppercase;
+      margin: 20px 0px;
+      font-size: 1rem;
+      padding: 20px;
+      font-weight: bold;
+      background-color:#dcecf9;
+      border:none;
+      color:#5d5d5d;
+      transition: all 0.5s ease;
+      &:hover{
+        transition: all 0.5s ease;
+        color:#5d5d5d;
+        background-color:#edf4f9;
+        cursor:pointer;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $medium){
+  .popup{
+    margin-left: 6vw;
+    width: 420px;
+  }
+}
+
+.highlight{
+  color: #f5b760;
+}
+
+.login_link{
+  font-size: 13px;
+  line-height: 25px;
+  padding: 10px 20px;
+  letter-spacing: 0.1em;
+  min-width: 120px;
+  margin: 10px 0px;
+  background-color: inherit;
+  border-radius: 40px;
+  background-color: #ff98a5;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  &:hover{
+    background-color:white;
+    transition: all 0.5s ease;
+    color:#ff98a5;
+  }
+}

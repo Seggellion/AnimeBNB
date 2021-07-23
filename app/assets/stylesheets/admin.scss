@@ -1,0 +1,16 @@
+.admin{
+  background-color: black;
+  color: green;
+  padding: 100px;
+  font-family: 'VT323', monospace;
+  .user_list{
+    width:100%;
+    th{
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+  .h1, .h2{
+    font-family: 'VT323', monospace;
+  }
+}

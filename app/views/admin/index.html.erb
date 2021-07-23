@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class="h2">Admin</h2>
+
+<table class="user_list">
+  <thead>
+    <tr>
+      <th>User level</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>email</th>
+      <th>BSC Address</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.user_level %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.vsc_address %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

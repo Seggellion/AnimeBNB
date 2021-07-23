@@ -1,0 +1,109 @@
+@import 'mixins';
+
+.social_link{
+  display: block;
+  width: 30px;
+  height: 30px;
+  &:hover svg{
+    fill: #ebcaa1;
+  }
+  svg{
+    fill:#8ac9ff;
+  }
+}
+.header_social_bar{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 80px;
+  width:90%;
+  left:0px;
+  top:0px;
+  margin:0px auto;
+  margin-bottom: -50px;
+  z-index: 9001;
+
+  .social_link {
+    svg{
+      fill: #313131;
+    }
+    &:hover svg{
+      fill: #ebcaa1;
+    }
+  }
+}
+
+@media screen and (min-width: $medium){
+  .header_social_bar{
+    position:absolute;
+    left: 10px;
+    top: 10px;
+    padding:0px;
+    height: 200px;
+    width: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+.profile_widget{
+  width: 86px;
+  position: absolute;
+  right: 0px;
+  top: 2%;
+  right: 1%;
+  top: 1;
+  #myLink:hover{
+    cursor:pointer;
+  }
+  .avatar{
+    width: 100%;
+    display: block;
+    margin: 0px;
+  }
+  ul{
+    margin: 0px;
+    padding: 0px;
+  }
+  .profile_menu{
+    position: absolute;
+    width: 200px;
+    left: -110px;
+    background-color: white;
+    top: 70px;
+    padding: 10px;
+    transition: height 0.5s ease;
+    &.hidden{
+      height: 0px;
+      overflow: hidden;
+      padding: 0px;
+      transition: height 0.5s ease;
+    }
+    li{
+      display:block;
+      list-style-type: none;
+      &:hover:not(.list_header){
+        background-color:#f9dbd9;
+      }
+      a, a:visited{
+        text-decoration:none;
+        color:black;
+        &:hover{
+          border_bottom:1px solid black;
+        }
+      }
+      &.list_header{
+        display: block;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      &:not(.list_header){
+            padding: 5.6px 20px;
+      }
+      .wallet{
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
