@@ -29,6 +29,40 @@
   p{
     margin: 5px 0px;
   }
+  .presale_link{
+    height:50px;
+    width: 90%;
+    text-align: center;
+    &:hover{
+      width: 60%;
+      transition: all 5s ease;
+    }
+      span{
+        opacity:0;
+        transition: all 0.5s ease;
+      }
+      &:hover span{
+        opacity:1;
+        transition: all 0.5s ease;
+      }
+      &:hover #timer{
+        opacity:0;
+        transition: all 0.5s ease;
+      }
+      #timer{
+        opacity:1;
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        margin-bottom:-25px;
+        small{
+          font-size:0.5rem;
+        }
+      }
+  }
+
   .login_link{
     text-align:center;
     .google_login{
@@ -91,8 +125,8 @@
   color: #f5b760;
 }
 
-.login_link{
-  font-size: 13px;
+.button{
+  font-size: 0.8rem;
   line-height: 25px;
   padding: 10px 20px;
   letter-spacing: 0.1em;
@@ -105,6 +139,22 @@
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.5s ease;
+  &.secondary{
+    background-color:transparent;
+    color: #ff98a5;
+    transition: all 1s ease;
+    border:1px solid transparent;
+    font-size: 1.3rem;
+    &:hover{
+      border:1px solid #ff98a5;
+      color: #ff98a5;
+      transition: all 1s ease;
+      span{
+        transition: all 0.1s ease;
+        font-size: 0.8rem;
+      }
+    }
+  }
   &:hover{
     background-color:white;
     transition: all 0.5s ease;
