@@ -1,14 +1,21 @@
 <div class="header_social_bar">
-  <%= link_to "https://t.co/xvtvqC7CqZ", class: "social_link", target: '_blank' do %>
-  <%= show_svg('telegram.svg') %>
+  <%= link_to "https://t.me/animebnb", title: 'English Telegram', 'data-toggle' => 'tooltip', class: "social_link", target: '_blank' do %>
+  <%= show_svg('telegram') %>
+  <%= show_svg('flag_uk', class: 'flag') %>
   <% end %>
+
+  <%= link_to "https://t.me/animebnbasia", title: '中文 Telegram', 'data-toggle' => 'tooltip', class: "social_link", target: '_blank' do %>
+  <%= show_svg('telegram') %>
+  <%= show_svg('flag_cn', class: 'flag') %>
+  <% end %>
+
   <%= link_to "https://twitter.com/anime_bnb", class: "social_link", target: '_blank' do %>
-  <%= show_svg('twitter.svg') %>
+  <%= show_svg('twitter') %>
   <% end %>
   <%= link_to "https://discord.gg/X5v9QFbSvx", class: "social_link", target: '_blank' do %>
-  <%= show_svg('discord.svg') %>
+  <%= show_svg('discord') %>
   <% end %>
   <%= link_to "https://www.reddit.com/r/AnimeBNB", class: "social_link", target: '_blank' do %>
-  <%= show_svg('reddit.svg') %>
+  <%= show_svg('reddit') %>
   <% end %>
 </div>

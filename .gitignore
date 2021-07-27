@@ -38,3 +38,4 @@ yarn-debug.log*
 server.csr
 server.key
 server.pass.key
+notes.sol

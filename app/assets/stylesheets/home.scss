@@ -18,14 +18,38 @@
 .popup{
   width:80%;
   background-color: white;
-  border-radius: 10px;
   margin:0px auto;
-  padding: 30px 20px;
+  padding: 0px 20px;
   display: flex;
   height: auto;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+    position: relative;
+  &:before {
+    content: "";
+    width: 89%;
+    height: 0;
+    position: absolute;
+    top: -22px;
+    left: 0;
+    border-bottom: 22px solid white;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+  }
+  &:after {
+    content: "";
+    width: 89%;
+    height: 0;
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    border-top: 22px solid white;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+  }
+
+
   p{
     margin: 5px 0px;
   }
@@ -118,6 +142,16 @@
   .popup{
     margin-left: 6vw;
     width: 420px;
+    &:before,&:after {
+      width: 376px;
+    }
+  }
+}
+@media screen and (min-width: 520px) and (max-width: 720px){
+  .popup{
+    &:before,&:after {
+      width: 92.1%;
+    }
   }
 }
 
@@ -145,6 +179,7 @@
     transition: all 1s ease;
     border:1px solid transparent;
     font-size: 1.3rem;
+    margin-bottom:0px;
     &:hover{
       border:1px solid #ff98a5;
       color: #ff98a5;

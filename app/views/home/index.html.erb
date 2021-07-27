@@ -72,6 +72,13 @@
   <% end %>
   </div>
   <script>
+    document.addEventListener("turbolinks:before-cache", function() {
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  });
+  </script>
+  <script>
     function myFunction() {
       var menu_element =  document.getElementById("profile_menu");
       menu_element.classList.toggle('hidden');

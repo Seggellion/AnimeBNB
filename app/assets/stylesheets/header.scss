@@ -5,9 +5,11 @@
   width: 30px;
   height: 30px;
   &:hover svg{
+    transition: all 0.5s ease;
     fill: #ebcaa1;
   }
   svg{
+    transition: all 0.5s ease;
     fill:#8ac9ff;
   }
 }
@@ -23,8 +25,17 @@
   z-index: 9001;
 
   .social_link {
+    position:relative;
     svg{
       fill: #313131;
+      &.flag{
+        width: 20px;
+        position: absolute;
+        z-index: 9001;
+        height: 20px;
+        bottom: -7px;
+        right: -6px;
+      }
     }
     &:hover svg{
       fill: #ebcaa1;
