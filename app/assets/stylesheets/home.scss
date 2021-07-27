@@ -25,7 +25,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-    position: relative;
+  position: relative;
+  img{
+    margin-bottom: -40px;
+    margin-top: -70px;
+  }
   &:before {
     content: "";
     width: 89%;
