@@ -1,6 +1,7 @@
+$green: #01c101;
 .admin{
   background-color: black;
-  color: green;
+  color: $green;
   padding: 100px;
   font-family: 'VT323', monospace;
   .user_list{
@@ -12,5 +13,17 @@
   }
   .h1, .h2{
     font-family: 'VT323', monospace;
+  }
+  a, a:visited{
+    color: $green;
+    background-color:black;
+    text-transform: uppercase;
+    text-decoration:none;
+    border-bottom:1px solid $green;
+    &:hover{
+      background-color:white;
+      color:black;
+      border-bottom:1px solid black;
+    }
   }
 }
