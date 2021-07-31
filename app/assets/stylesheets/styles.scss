@@ -3,7 +3,11 @@
 * {
   box-sizing: border-box;
 }
-
+ul,li{
+  list-style: none;
+  margin:0px;
+  padding:0px;
+}
 h1,h2,h3,h4,h5,h6{
   font-family: 'Cormorant Garamond', serif;
   margin-top:0px;
@@ -11,6 +15,7 @@ h1,h2,h3,h4,h5,h6{
 .h1{
   font-size: 3rem;
   line-height: 3.1rem;
+  font-weight:100;
 }
 .h2{
   text-transform: uppercase;
@@ -63,7 +68,7 @@ body{
 .wrapper{
   .banner{
     background-position: top;
-    background-image: image-url('anime_main.jpeg');
+    background-image: image-url('starry_background.jpg');
     background-size: cover;
     height: 100vh;
     display: flex;

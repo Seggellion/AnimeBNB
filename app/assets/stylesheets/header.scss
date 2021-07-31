@@ -1,5 +1,35 @@
 @import 'mixins';
 
+nav{
+  position: absolute;
+  color: white;
+  width: 100%;
+  justify-content: flex-end;
+  text-align: right;
+  display: flex;
+  padding: 10px 30px;
+  a, a:visited{
+    color:white;
+    text-decoration: none;
+    font-weight:100;
+      font-size: 1rem;
+    transition: all 0.2s ease;
+    &:hover{
+      font-size: 1.4rem;
+      font-weight:900;
+      transition: all 0.2s ease;
+    }
+  }
+  ul{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    li{
+
+    }
+  }
+}
+
 .social_link{
   display: block;
   width: 30px;
@@ -17,17 +47,19 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 80px;
-  width:90%;
   left:0px;
-  top:0px;
+  bottom:0px;
   margin:0px auto;
   margin-bottom: -50px;
   z-index: 9001;
-
+  width: 100%;
+  position: absolute;
+  top: auto;
+  margin: 0px;
   .social_link {
     position:relative;
     svg{
-      fill: #313131;
+      fill: white;
       &.flag{
         width: 20px;
         position: absolute;
@@ -38,22 +70,24 @@
       }
     }
     &:hover svg{
-      fill: #ebcaa1;
+      fill: #4143c7;
     }
   }
 }
 
 @media screen and (min-width: $medium){
   .header_social_bar{
+    bottom: 20px;
+    top: auto;
+    left: 4vw;
+    width: 300px;
+    flex-direction: row;
+    height: 30px;
+    margin: 0px;
     position:absolute;
-    left: 10px;
-    top: 10px;
     padding:0px;
-    height: 200px;
-    width: 30px;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
   }
 }
 
