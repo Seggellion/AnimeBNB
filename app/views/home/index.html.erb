@@ -19,7 +19,7 @@
          At Anime BNB we are dedicated to giving the community a unique rewards system with exclusive payouts through a gaming platform so you can play and earn $BNB and <span class="highlight">$ANB</span>.
     </p>
       <p>
-         Presale Sunday August 1st 2021. Join telegram for BNB giveaways
+         Presale Sunday August 3rd 2021. Join telegram for BNB giveaways
       </p>
       <%= link_to user_google_oauth2_omniauth_authorize_path, class: "login_link button", method: :post do %>
       Sign up for community updates
@@ -81,7 +81,7 @@
     }
   </script>
 <script>
-  const finaleDate = new Date("August 1, 2021 00:08:00").getTime();
+  const finaleDate = new Date("August 3, 2021 00:08:00").getTime();
 
   const timer = () =>{
       const now = new Date().getTime();
@@ -97,7 +97,7 @@
       let minutes = Math.floor(diff % (1000*60*60)/ (1000*60));
       let seconds = Math.floor(diff % (1000*60) / 1000);
     // Adding the zeros.
-      days <= 99 ? days = `0${days}` : days;
+      days <= 99 ? days = `${days}` : days;
       days <= 9 ? days = `${days}` : days;
       hours <= 9 ? hours = `0${hours}` : hours;
       minutes <= 9 ? minutes = `0${minutes}` : minutes;
