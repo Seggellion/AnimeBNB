@@ -5,11 +5,13 @@
 
     <div class="popup">
       <% if current_user %>
-          <h1 class="h1"><span class="highlight">$ANIMEBNB</span><br/>Hold $ANB </br/> EARN BNB.</h1>
-      <h2 class="center">Thanks for signing up!<br /> Stay tuned for updates!</h2>
+      <h1 class="h1"><span class="highlight">$ANIMEBNB</span><br/>Hold $ANB </br/> EARN BNB.</h1>
+      <h2 class="h2 center">Thanks for signing up!<br /> Stay tuned for updates!</h2>
       <img src="https://pa1.narvii.com/7676/717445cd850127611f2ee15491fd9711df870c2er1-520-293_hq.gif" />
       <br  />
-
+      <%= link_to "https://dxsale.app/app/v2_9/defipresale?saleID=2030&chain=BSC", class: "login_link button", method: :post do %>
+      Join the presale
+      <% end %>
       <% else %>
       <h1 class="h1"><span class="highlight">$ANIMEBNB</span><br/>Hold $ANB </br/> EARN BNB.</h1>
       <p>
@@ -19,25 +21,16 @@
          At Anime BNB we are dedicated to giving the community a unique rewards system with exclusive payouts through a gaming platform so you can play and earn $BNB and <span class="highlight">$ANB</span>.
     </p>
       <p>
-         Presale Sunday August 1st 2021. Join telegram for BNB giveaways
+         Presale Started. Join telegram for BNB giveaways
       </p>
-      <%= link_to user_google_oauth2_omniauth_authorize_path, class: "login_link button", method: :post do %>
-      Sign up for community updates
-      <%#= image_tag("google_login.png", class: "google_login")%>
+      <%= link_to "https://dxsale.app/app/v2_9/defipresale?saleID=2030&chain=BSC", class: "login_link button", method: :post do %>
+      Join the presale
       <% end %>
-
       <% end %>
-      <a href="#" class="presale_link button secondary">
-        <div id="timer">
-          <div id="days"> </div><small>days</small>
-          <div id="hours"></div><small>hours</small>
-          <div id="minutes"></div><small>min</small>
-          <div id="seconds"></div><small>sec</small>
-        </div>
+    </div>
 
-      <span>Join the presale</span>
-
-      </a>
+    <div class="banner_flair">
+      <%= image_tag("angel.png", class: "banner_flair")%>
     </div>
 
   </div>
@@ -68,48 +61,8 @@
   <% end %>
   </div>
   <script>
-    document.addEventListener("turbolinks:before-cache", function() {
-    $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-  });
-  </script>
-  <script>
     function myFunction() {
       var menu_element =  document.getElementById("profile_menu");
       menu_element.classList.toggle('hidden');
     }
   </script>
-<script>
-  const finaleDate = new Date("August 1, 2021 00:08:00").getTime();
-
-  const timer = () =>{
-      const now = new Date().getTime();
-      let diff = finaleDate - now;
-      // Showing the alert when the counter time finishes.
-      if(diff < 0){
-          document.querySelector('.alert').style.display = 'block';
-          document.querySelector('.container').style.display = 'none';
-      }
-
-      let days = Math.floor(diff / (1000*60*60*24));
-      let hours = Math.floor(diff % (1000*60*60*24) / (1000*60*60));
-      let minutes = Math.floor(diff % (1000*60*60)/ (1000*60));
-      let seconds = Math.floor(diff % (1000*60) / 1000);
-    // Adding the zeros.
-      days <= 99 ? days = `${days}` : days;
-      days <= 9 ? days = `${days}` : days;
-      hours <= 9 ? hours = `0${hours}` : hours;
-      minutes <= 9 ? minutes = `0${minutes}` : minutes;
-      seconds <= 9 ? seconds = `0${seconds}` : seconds;
-
-      document.querySelector('#days').textContent = days;
-      document.querySelector('#hours').textContent = hours;
-      document.querySelector('#minutes').textContent = minutes;
-      document.querySelector('#seconds').textContent = seconds;
-
-  };
-  timer();
-  // Calling the function every 1000 milliseconds.
-  setInterval(timer,1000);
-</script>

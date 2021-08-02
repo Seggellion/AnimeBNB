@@ -1,0 +1,114 @@
+@import 'mixins';
+
+.dark_mode .banner {
+  background-image: image-url('starry_background.jpg');
+  .banner_flair{
+    display:block;
+    position:absolute;
+    bottom: 6vh;
+    right:2vw;
+    width: 60%;
+    z-index:1
+  }
+}
+.light_mode .banner {
+  background-image: image-url('anime_main.jpeg');
+  .banner_flair{
+    display:none;
+  }
+}
+.dark_mode{
+  .h1, p, .h2{
+    color:white;
+  }
+  .back{
+    background-color: $dark_blue;
+  }
+  nav{
+    color: white;
+    a,a:visited{
+      color: white;
+    }
+  }
+  .popup{
+    background-color: #111111d1;
+    &:before{
+      border-bottom: 22px solid #111111d1;
+    }
+    &:after{
+      border-top: 22px solid #111111d1;
+    }
+  }
+  .button{
+    background-color: $blue;
+    &.secondary{
+      color: $blue;
+      &:hover{
+        border:1px solid $blue;
+        color: $blue;
+      }
+    }
+    &:hover{
+      color: $blue;
+    }
+  }
+  .social_link {
+    &:hover svg{
+      fill: $blue;
+    }
+    svg{
+      fill: $light_grey;
+    }
+  }
+  .profile_widget .profile_menu li:hover:not(.list_header){
+    background-color: $blue;
+  }
+}
+
+.light_mode{
+  .h1, p, .h2{
+    color:black;
+  }
+  .back{
+    background-color: $orange;
+  }
+  nav{
+    color: black;
+    a,a:visited{
+      color: black;
+    }
+  }
+  .popup{
+    background-color:white;
+    &:before{
+      border-bottom: 22px solid white;
+    }
+    &:after{
+      border-top: 22px solid white;
+    }
+  }
+  .button{
+    background-color: $pink;
+    &.secondary{
+      color: $pink;
+      &:hover{
+        border:1px solid $pink;
+        color: $pink;
+      }
+    }
+    &:hover{
+      color: $pink;
+    }
+  }
+  .social_link {
+    &:hover svg{
+      fill: $orange;
+    }
+    svg{
+      fill: #313131;
+    }
+  }
+  .profile_widget .profile_menu li:hover:not(.list_header){
+    background-color: #f9dbd9;
+  }
+}

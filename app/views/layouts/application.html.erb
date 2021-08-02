@@ -22,11 +22,10 @@
 <% end %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'profile_menu', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body class="body <% if admin_page? %>admin<%end%>">
+<body class="body main-frame <% if admin_page? %>admin<%end%>">
   <% if notice || alert %>
   <div id="alert_container" class="alerts">
     <% if notice %><p class="notice"><%= notice %></p><%end%>

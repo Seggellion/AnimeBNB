@@ -49,14 +49,11 @@ body{
   }
 }
 
-
-
 @media screen and (min-width: $medium){
   .alerts{
     position:absolute;
   }
 }
-
 
 .notice, .alert{
   background-color: white;
@@ -68,7 +65,6 @@ body{
 .wrapper{
   .banner{
     background-position: top;
-    background-image: image-url('starry_background.jpg');
     background-size: cover;
     height: 100vh;
     display: flex;
