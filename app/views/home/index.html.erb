@@ -5,13 +5,15 @@
 
     <div class="popup">
       <% if current_user %>
-        <h1 class="h1">HOLD <span class="highlight">$ANIMEBNB</span>, <span class="pull-right">EARN BNB.</span></h1>
-      <h2 class="center">Thanks for signing up!<br /> Stay tuned for updates!</h2>
+      <h1 class="h1"><span class="highlight">$ANIMEBNB</span><br/>Hold $ANB </br/> EARN BNB.</h1>
+      <h2 class="h2 center">Thanks for signing up!<br /> Stay tuned for updates!</h2>
       <img src="https://pa1.narvii.com/7676/717445cd850127611f2ee15491fd9711df870c2er1-520-293_hq.gif" />
       <br  />
-
+      <%= link_to "https://dxsale.app/app/v2_9/defipresale?saleID=2030&chain=BSC", class: "login_link button" do %>
+      Join the presale
+      <% end %>
       <% else %>
-      <h1 class="h1">HOLD <span class="highlight">$ANIMEBNB</span>, <span class="pull-right">EARN BNB.</span></h1>
+      <h1 class="h1"><span class="highlight">$ANIMEBNB</span><br/>Hold $ANB </br/> EARN BNB.</h1>
       <p>
         AnimeBNB  <span class="highlight">$ANB</span> is the  world's first Auto reward BNB cryptocurrency token.
       </p>
@@ -21,23 +23,21 @@
       <p>
          Presale Started. Join telegram for BNB giveaways
       </p>
-      <%= link_to user_google_oauth2_omniauth_authorize_path, class: "login_link button", method: :post do %>
-      Sign up for community updates
-      <%#= image_tag("google_login.png", class: "google_login")%>
+      <%= link_to "https://dxsale.app/app/v2_9/defipresale?saleID=2030&chain=BSC", class: "login_link button" do %>
+      Join the presale
       <% end %>
-
       <% end %>
-        <a href="https://dxsale.app/app/v2_9/defipresale?saleID=2030&chain=BSC" target="_blank" class="presale_link button secondary">
-        <div id="timer">
-          Click here to buy $ANB
-        </div>
+    </div>
 
-      <span>Join the presale</span>
-
-      </a>
+    <div class="banner_flair">
+      <%= image_tag("angel.png", class: "banner_flair")%>
     </div>
 
   </div>
+
+<%= render 'roadmap' %>
+
+<%= render 'tokenomics' %>
 
 
   <% if user_signed_in? %>
@@ -63,20 +63,15 @@
 
   </div>
   <% end %>
+
   </div>
-  <script>
-    document.addEventListener("turbolinks:before-cache", function() {
-    $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-  });
-  </script>
   <script>
     function myFunction() {
       var menu_element =  document.getElementById("profile_menu");
       menu_element.classList.toggle('hidden');
     }
   </script>
+<<<<<<< HEAD
 <script>
   const finaleDate = new Date("August 3, 2021 00:08:00").getTime();
 
@@ -110,3 +105,5 @@
   // Calling the function every 1000 milliseconds.
   setInterval(timer,1000);
 </script>
+=======
+>>>>>>> new_interface

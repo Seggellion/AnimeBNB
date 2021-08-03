@@ -18,15 +18,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <% else %>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@100;400;700&family=Montserrat&display=swap" rel="stylesheet">
 <% end %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'profile_menu', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body class="body <% if admin_page? %>admin<%end%>">
+<body class="body main-frame <% if admin_page? %>admin<%end%>">
   <% if notice || alert %>
   <div id="alert_container" class="alerts">
     <% if notice %><p class="notice"><%= notice %></p><%end%>
@@ -44,5 +43,17 @@
 
     gtag('config', 'G-VKD5BFPWBZ');
   </script>
+
+
+  <!-- Cookie Consent by https://www.CookieConsent.com -->
+  <script type="text/javascript" src="//www.cookieconsent.com/releases/4.0.0/cookie-consent.js" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+//  document.addEventListener('DOMContentLoaded', function () {
+//  cookieconsent.run({"notice_banner_type":"headline","consent_type":"implied","palette":"dark","language":"en","page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"website_name":"https://animebnb.io","open_preferences_center_selector":"#open_preferences_center"});
+//  });
+  </script>
+  <!-- End Cookie Consent by https://www.CookieConsent.com -->
+
+
 </body>
 </html>

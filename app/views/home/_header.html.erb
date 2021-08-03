@@ -1,21 +1,62 @@
+<nav>
+  <ul>
+    <li>
+      <a href="#tokenomics">
+      Tokenomics
+      </a>
+    </li>
+    <li>
+      <%= link_to user_google_oauth2_omniauth_authorize_path, class: "link", method: :post do %>
+       Account
+      <% end %>
+    </li>
+    <li>
+      <a href="#">
+      Whitepaper
+      </a>
+    </li>
+    <li>
+      <a href="#">
+      Team
+      </a>
+    </li>
+    <li>
+      <a href="https://bscscan.com/token/0x0792b3e003ca49b21dae5d9c24ad6219bb39658b#balances" target="_blank">
+      Contract
+      </a>
+    </li>
+    <li>
+      <div id="view_mode" href="#">
+          <div class="on-off">
+            <div class="back2"></div>
+            <div class="back"></div>
+            <div class="front"></div>
+        </div>
+      </div>
+    </li>
+    </ul>
+  </nav>
 <div class="header_social_bar">
-  <%= link_to "https://t.me/animebnb", title: 'English Telegram', 'data-toggle' => 'tooltip', class: "social_link", target: '_blank' do %>
-  <%= show_svg('telegram') %>
-  <%= show_svg('flag_uk', class: 'flag') %>
-  <% end %>
+  <h2 class="h1">Stay Connected</h2>
+  <div class="social_icons">
+    <%= link_to "https://t.me/animebnb", title: 'English Telegram', 'data-toggle' => 'tooltip', class: "social_link", target: '_blank' do %>
+    <%= show_svg('telegram') %>
+    <%= show_svg('flag_uk', class: 'flag') %>
+    <% end %>
 
-  <%= link_to "https://t.me/animebnbasia", title: '中文 Telegram', 'data-toggle' => 'tooltip', class: "social_link", target: '_blank' do %>
-  <%= show_svg('telegram') %>
-  <%= show_svg('flag_cn', class: 'flag') %>
-  <% end %>
+    <%= link_to "https://t.me/animebnbasia", title: '中文 Telegram', 'data-toggle' => 'tooltip', class: "social_link", target: '_blank' do %>
+    <%= show_svg('telegram') %>
+    <%= show_svg('flag_cn', class: 'flag') %>
+    <% end %>
 
-  <%= link_to "https://twitter.com/anime_bnb", class: "social_link", target: '_blank' do %>
-  <%= show_svg('twitter') %>
-  <% end %>
-  <%= link_to "https://discord.gg/X5v9QFbSvx", class: "social_link", target: '_blank' do %>
-  <%= show_svg('discord') %>
-  <% end %>
-  <%= link_to "https://www.reddit.com/r/AnimeBNB", class: "social_link", target: '_blank' do %>
-  <%= show_svg('reddit') %>
-  <% end %>
+    <%= link_to "https://twitter.com/anime_bnb", class: "social_link", target: '_blank' do %>
+    <%= show_svg('twitter') %>
+    <% end %>
+    <%= link_to "https://discord.gg/X5v9QFbSvx", class: "social_link", target: '_blank' do %>
+    <%= show_svg('discord') %>
+    <% end %>
+    <%= link_to "https://www.reddit.com/r/AnimeBNB", class: "social_link", target: '_blank' do %>
+    <%= show_svg('reddit') %>
+    <% end %>
+  </div>
 </div>
