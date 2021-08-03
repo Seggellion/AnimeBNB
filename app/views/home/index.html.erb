@@ -9,7 +9,7 @@
       <h2 class="h2 center">Thanks for signing up!<br /> Stay tuned for updates!</h2>
       <img src="https://pa1.narvii.com/7676/717445cd850127611f2ee15491fd9711df870c2er1-520-293_hq.gif" />
       <br  />
-      <%= link_to "https://dxsale.app/app/v2_9/defipresale?saleID=2030&chain=BSC", class: "login_link button", method: :post do %>
+      <%= link_to "https://dxsale.app/app/v2_9/defipresale?saleID=2030&chain=BSC", class: "login_link button" do %>
       Join the presale
       <% end %>
       <% else %>
@@ -23,7 +23,7 @@
       <p>
          Presale Started. Join telegram for BNB giveaways
       </p>
-      <%= link_to "https://dxsale.app/app/v2_9/defipresale?saleID=2030&chain=BSC", class: "login_link button", method: :post do %>
+      <%= link_to "https://dxsale.app/app/v2_9/defipresale?saleID=2030&chain=BSC", class: "login_link button" do %>
       Join the presale
       <% end %>
       <% end %>
@@ -34,6 +34,10 @@
     </div>
 
   </div>
+
+<%= render 'roadmap' %>
+
+<%= render 'tokenomics' %>
 
 
   <% if user_signed_in? %>
@@ -59,6 +63,7 @@
 
   </div>
   <% end %>
+
   </div>
   <script>
     function myFunction() {
