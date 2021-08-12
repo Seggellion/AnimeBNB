@@ -1,0 +1,74 @@
+@import 'mixins';
+#video_gallery{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .video{
+    width: 580px;
+    height: 330px;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .card{
+    width:260px;
+    height:260px;
+    position:absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .char_01{
+    background-image: image-url('char_01.png');
+    top:10%;
+    left:0px;
+  }
+  @media screen and (max-width: $medium){
+    .char_01,.char_05{
+      display:none;
+    }
+  }
+  .char_02{
+    background-image: image-url('char_02.png');
+    bottom:0px;
+    left:0px;
+  }
+  .char_03{
+    background-image: image-url('char_03.png');
+    left:50%;
+    transform: translateX(-50%);
+    bottom:0px;
+  }
+  .char_04{
+    background-image: image-url('char_04.png');
+    bottom:0px;
+    right:-30px;
+  }
+  .char_05{
+    background-image: image-url('char_05.png');
+    right:0px;
+    top:10%;
+  }
+
+  @media screen and (min-width: $medium){
+    .right-col{
+      padding-left: 11vw;
+    }
+  }
+  @media screen and (max-width: $small){
+    .col.left-col p{
+      border-bottom: 1px solid #4e4e4e;
+      line-height: 30px;
+      font-size: 0.8rem;
+    }
+    h2{
+      font-size: 2.5rem;
+    }
+    .right-col{
+      text-align:center;
+    }
+  }
+}

@@ -21,6 +21,9 @@
   .h1, p, .h2{
     color:white;
   }
+  .highlight{
+    color:$blue;
+  }
   .back{
     background-color: $dark_blue;
   }
@@ -29,6 +32,9 @@
     a,a:visited{
       color: white;
     }
+  }
+  #video_gallery{
+    background-image: image-url('starry_background_02.jpg');
   }
   .popup{
     background-color: #111111d1;
@@ -92,11 +98,17 @@
   .back{
     background-color: $orange;
   }
+  .highlight{
+    color:$orange;
+  }
   nav{
     color: black;
     a,a:visited{
       color: black;
     }
+  }
+  #video_gallery{
+    background-image: image-url('cloudy_sky.jpg');
   }
   .popup{
     background-color:white;
@@ -132,11 +144,11 @@
     background-color: #f9dbd9;
   }
   section {
-    &:nth-of-type(even){
-      background-color: $orange
-    }
-    &:nth-of-type(odd){
+    &:last-child(even){
       background-color: white;
+    }
+    &:last-child{
+      background-color: $orange
     }
     hr{
       border-top:1px solid $pink;
