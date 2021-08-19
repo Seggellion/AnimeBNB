@@ -18,7 +18,7 @@
   }
 }
 .dark_mode{
-  .h1, p, .h2{
+  .h1, p, .h2, .card ul{
     color:white;
   }
   .highlight{
@@ -92,7 +92,7 @@
 }
 
 .light_mode{
-  .h1, p, .h2{
+  .h1, p, .h2, .card ul{
     color:black;
   }
   .back{
