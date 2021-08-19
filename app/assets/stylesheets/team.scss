@@ -1,7 +1,17 @@
+@import 'mixins';
+
 #team{
   display:flex;
   flex-direction:row;
   justify-content: space-between;
+  @media screen and (max-width: $medium){
+    li{
+      font-size: 0.7rem;
+    }
+    h3{
+      font-size: 1.7rem;
+    }
+  }
   .team-container{
     width: 100%;
     display: flex;
@@ -13,8 +23,14 @@
       align-items: center;
       padding: 0px 50px;
       overflow:hidden;
+      @media screen and (max-width: $medium){
+        padding: 0px 10px;
+      }
       .profile{
-      height:355px;
+        height: 255px;
+        @media screen and (max-width: $medium){
+          height: 125px;
+        }
       }
       ul{
         margin-bottom: 60px;

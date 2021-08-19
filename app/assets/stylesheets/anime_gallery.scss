@@ -7,6 +7,37 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-width: $medium){
+    height:100vh;
+  }
+  .text-block{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 15vh;
+    z-index: 9000;
+    .right-col{
+      padding-right: 13vw;
+      padding-left: 3vw;
+    }
+      @media screen and (max-width: $medium){
+        background-color: #000000b8;
+        padding: 20px;
+        .right-col{
+          padding-right: 1vw;
+          padding-left: 1vw;
+        }
+      }
+
+    hr{
+      margin-bottom:30px;
+    }
+    .col{
+      width:48%;
+      display:inline-block;
+    }
+  }
   .video{
     width: 100%;
     height: 330px;

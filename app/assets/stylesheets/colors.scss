@@ -18,7 +18,7 @@
   }
 }
 .dark_mode{
-  .h1, p, .h2, .card ul{
+  .h1, p, .h2, .card ul, h3{
     color:white;
   }
   .highlight{
@@ -92,7 +92,7 @@
 }
 
 .light_mode{
-  .h1, p, .h2, .card ul{
+  .h1, p, .h2, .card ul, h3{
     color:black;
   }
   .back{
@@ -106,6 +106,9 @@
     a,a:visited{
       color: black;
     }
+  }
+  #team h3{
+    color:white;
   }
   #video_gallery{
     background-image: image-url('cloudy_sky.jpg');
