@@ -35,6 +35,11 @@
   }
   #video_gallery{
     background-image: image-url('starry_background_02.jpg');
+    @media screen and (max-width: $medium){
+      .text-block{
+        background-color: #000000b8;
+      }
+    }
   }
   .popup{
     background-color: #111111d1;
@@ -112,6 +117,11 @@
   }
   #video_gallery{
     background-image: image-url('cloudy_sky.jpg');
+    @media screen and (max-width: $medium){
+      .text-block{
+        background-color: #ffffffc7;
+      }
+    }
   }
   .popup{
     background-color:white;
